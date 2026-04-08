@@ -1,0 +1,28 @@
+import type { MetadataRoute } from 'next'
+
+export default function manifest(): MetadataRoute.Manifest {
+  return {
+    name: '院内電話帳PWA',
+    short_name: '院内電話帳',
+    description: 'OCR承認フローとローカル保存に対応した院内向け電話帳PWA',
+    start_url: '/',
+    display: 'standalone',
+    background_color: '#f8fbff',
+    theme_color: '#0f766e',
+    icons: [
+      {
+        src: '/icon.svg',
+        sizes: 'any',
+        type: 'image/svg+xml',
+        purpose: 'any',
+      },
+      {
+        src: '/maskable-icon.svg',
+        sizes: 'any',
+        type: 'image/svg+xml',
+        purpose: 'maskable',
+      },
+    ],
+  }
+}
+

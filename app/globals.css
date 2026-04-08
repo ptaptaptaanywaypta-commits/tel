@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-top: #f8fbff;
+  --bg-bottom: #eef4ff;
+  --ink: #0f172a;
+  --muted: #475569;
+  --line: rgba(15, 23, 42, 0.08);
+  --accent: #2563eb;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 32%),
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.12), transparent 28%),
+    linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+  color: var(--ink);
+  font-family: 'Hiragino Sans', 'Yu Gothic', 'Noto Sans JP', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.3;
+  background-image:
+    linear-gradient(rgba(37, 99, 235, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.82), transparent 92%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+@layer components {
+  .app-shell {
+    @apply relative z-10 mx-auto min-h-screen max-w-5xl px-3 pb-24 pt-3 sm:px-4;
+    padding-top: calc(0.75rem + env(safe-area-inset-top));
+    padding-bottom: calc(6rem + env(safe-area-inset-bottom));
+  }
+
+  .panel-surface {
+    @apply rounded-[24px] border border-white/90 bg-white shadow-board backdrop-blur-xl;
+  }
+
+  .section-heading {
+    @apply text-base font-semibold tracking-tight text-slate-900;
+  }
+
+  .soft-label {
+    @apply inline-flex items-center rounded-full border border-white/80 bg-white/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500;
+  }
+
+  .field-label {
+    @apply mb-2 block text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500;
+  }
+
+  .touch-button {
+    @apply inline-flex min-h-[44px] items-center justify-center rounded-2xl px-4 py-3 text-sm font-semibold;
+  }
+
+  .mobile-card {
+    @apply rounded-[24px] border border-slate-200 bg-white p-4 shadow-sm;
+  }
+
+  .sticky-safe-top {
+    top: calc(0.5rem + env(safe-area-inset-top));
+  }
+
+  .bottom-safe {
+    padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
+  }
+}
