@@ -1,0 +1,26 @@
+{
+  "lib\\db.ts -> idb": {
+    "id": 3899,
+    "files": [
+      "static/chunks/899.6b28c4290312e1d2.js"
+    ]
+  },
+  "lib\\ocr\\tesseractAdapter.ts -> tesseract.js": {
+    "id": 9013,
+    "files": [
+      "static/chunks/13.4f566be878a24c50.js"
+    ]
+  },
+  "node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {
+    "id": 5139,
+    "files": [
+      "static/chunks/139.7a5a8e93a21948c1.js"
+    ]
+  },
+  "node_modules\\next\\dist\\client\\index.js -> ../pages/_error": {
+    "id": 1646,
+    "files": [
+      "static/chunks/646.f342b7cffc01feb0.js"
+    ]
+  }
+}

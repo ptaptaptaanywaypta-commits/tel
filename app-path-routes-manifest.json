@@ -1,0 +1,6 @@
+{
+  "/manifest.webmanifest/route": "/manifest.webmanifest",
+  "/_not-found/page": "/_not-found",
+  "/page": "/",
+  "/admin/page": "/admin"
+}

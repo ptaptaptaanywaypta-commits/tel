@@ -100,13 +100,16 @@ export function AdminPinGate({ children }: { children: ReactNode }) {
 
   if (state === 'unconfigured') {
     return (
-      <section className="panel-surface p-5">
-        <div className="soft-label">PIN Lock</div>
-        <h1 className="mt-3 text-xl font-semibold text-slate-900">管理 PIN が未設定です</h1>
-        <p className="mt-2 text-sm leading-6 text-slate-600">
-          `.env.local` に `NEXT_PUBLIC_ADMIN_PIN_HASH` を設定すると管理画面をロックできます。
-        </p>
-      </section>
+      <div className="space-y-4">
+        <div className="panel-surface flex flex-col gap-2 p-4 text-sm text-slate-600">
+          <div className="soft-label">PIN Lock</div>
+          <div className="font-semibold text-slate-900">PIN 未設定のためロックをスキップしています</div>
+          <p className="leading-6">
+            `.env.local` に `NEXT_PUBLIC_ADMIN_PIN_HASH` を設定すると、管理画面に PIN ロックをかけられます。
+          </p>
+        </div>
+        {children}
+      </div>
     )
   }
 
